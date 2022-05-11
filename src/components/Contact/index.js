@@ -17,7 +17,7 @@ function ContactForm() {
             setErrorMessage('Your email is invalid!');
         } else {
             setErrorMessage('');
-        } 
+            } 
         }   else {
             if (!e.target.value.length) {
                 setErrorMessage(`${e.target.name} is required.`);
@@ -48,11 +48,11 @@ return (
         <form id="contact-form" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">Name:</label>
-                <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
+                <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
             </div>
             <div>
                 <label htmlFor="email">Email address:</label>
-                <input type="email" defaultValue={email} onBlur={handleChange} name="email" />
+                <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
             </div>
             <div>
                 <label htmlFor="message">Message:</label>
